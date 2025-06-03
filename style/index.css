@@ -124,7 +124,7 @@ body {
   text-align: center;
   padding: 100px 20px;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  background-image: url('/../uploads/fondo.jpg'); /* Puedes cambiar la imagen */
+  background-image: url('/../img/fondo.jpg'); /* Puedes cambiar la imagen */
   background-size: cover;
   background-position: center;
   color: #ffffff;
