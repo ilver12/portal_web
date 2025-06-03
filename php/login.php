@@ -49,6 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <button type="submit">Iniciar sesión</button>
     </form>
     <p class="registro-link">¿No tienes cuenta? <a href="register.php">Regístrate</a></p>
+      <a class="back-home-link" href="/index.php" title="Volver al inicio">← Regresar al inicio</a>
+
   </div>
 
   <!-- Fondo animado -->

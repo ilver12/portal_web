@@ -41,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <button type="submit">Registrarse</button>
     </form>
     <p class="login-link">¿Ya tienes cuenta? <a href="login.php">Inicia sesión</a></p>
+      <a class="back-home-link" href="/index.php" title="Volver al inicio">← Regresar al inicio</a>
+
   </div>
 
   <!-- Ondas y burbujas -->
