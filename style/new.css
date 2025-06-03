@@ -1,0 +1,132 @@
+/* Secciones principales con fondo personalizado y efecto elegante */
+.testimonios, .como-funciona, .equipo {
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Fondo elegante con líneas animadas y degradado para cada sección */
+.testimonios {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+.testimonios::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.05) 2px,
+    transparent 2px,
+    transparent 8px
+  );
+  animation: moveLines 30s linear infinite;
+  z-index: 0;
+}
+
+.como-funciona {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+.como-funciona::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.03),
+    rgba(255,255,255,0.03) 2px,
+    transparent 2px,
+    transparent 8px
+  );
+  animation: moveLines 40s linear infinite reverse;
+  z-index: 0;
+}
+
+.equipo {
+  background: linear-gradient(to right, #000000, #434343);
+}
+.equipo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    60deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.04) 2px,
+    transparent 2px,
+    transparent 12px
+  );
+  animation: moveLines 50s linear infinite;
+  z-index: 0;
+}
+
+/* Contenedores internos con flex */
+.testimonio-lista, .pasos, .miembros {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tarjetas individuales estilo glassmorphism */
+.testimonio, .paso, .miembro {
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.testimonio:hover, .paso:hover, .miembro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Imágenes redondas */
+.testimonio img, .miembro img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Título de pasos */
+.paso h3 {
+  color: #ffcc70;
+}
+
+/* Animación de aparición al hacer scroll */
+.paso {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+.paso.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Líneas animadas fondo */
+@keyframes moveLines {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100px, 100px);
+  }
+}

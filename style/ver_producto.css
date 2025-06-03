@@ -255,3 +255,68 @@ body, html {
   10%, 90% { opacity: 1; transform: translateY(0); }
   100% { opacity: 0; transform: translateY(-10px); }
 }
+
+.carrito-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff9800;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.carrito-flotante span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  line-height: normal;
+}
+
+.mini-carrito {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 250px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 998;
+}
+
+.mini-carrito h4 {
+  margin-top: 0;
+}
+
+.mini-carrito ul {
+  padding-left: 20px;
+  margin: 0 0 10px 0;
+}
+
+.mini-carrito button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.mini-carrito.oculto {
+  display: none;
+}
+
