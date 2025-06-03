@@ -10,6 +10,7 @@ session_start();
   <title>Portal de Software</title>
   <link rel="stylesheet" href="/../style/index.css" />
   <link rel="stylesheet" href="/../style/estrella.css" />
+  <link rel="stylesheet" href="/../style/new.css" />
 </head>
 <body>
 
@@ -17,7 +18,7 @@ session_start();
 <header>
   <nav class="navbar">
     <div class="logo">
-      <img src="images/logo.png" alt="Logo" />
+      <img src="/img/logo.avif" alt="Logo" />
       <span>Portal Software</span>
     </div>
     <div class="nav-links">
@@ -99,6 +100,70 @@ session_start();
   </div>
 </section>
 
+<!-- TESTIMONIOS CON CARICATURAS -->
+<section class="testimonios">
+  <h2>💬 Lo que dicen nuestros clientes</h2>
+  <div class="testimonio-lista">
+    <div class="testimonio">
+      <img src="/img/avatar 1.svg" alt="Cliente feliz" />
+      <p>"Gracias a Portal Software, automatizamos nuestra empresa en menos de una semana."</p>
+      <span>- Ana, Empresaria</span>
+    </div>
+    <div class="testimonio">
+      <img src="/img/avatar2.svg" alt="Cliente satisfecho" />
+      <p>"Sencillo, práctico y muy económico. ¡Ideal para pequeños negocios!"</p>
+      <span>- Luis, Panadero</span>
+    </div>
+    <div class="testimonio">
+      <img src="/img/avatar3.svg" alt="Cliente emprendedor" />
+      <p>"El soporte es increíble y las herramientas son justo lo que necesitaba."</p>
+      <span>- Marisol, Emprendedora Digital</span>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section class="como-funciona">
+  <h2>🛠️ ¿Cómo funciona?</h2>
+  <div class="pasos">
+    <div class="paso" data-step="1">
+      <h3>1. Regístrate</h3>
+      <p>Crea tu cuenta en segundos. Solo necesitas un correo electrónico.</p>
+    </div>
+    <div class="paso" data-step="2">
+      <h3>2. Personaliza</h3>
+      <p>Selecciona los módulos que necesitas: ventas, facturación, inventario, y más.</p>
+    </div>
+    <div class="paso" data-step="3">
+      <h3>3. ¡A trabajar!</h3>
+      <p>Comienza a usar el software desde cualquier lugar, sin complicaciones.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NUESTRO EQUIPO -->
+<section class="equipo">
+  <h2>👨‍💻 Conoce al equipo</h2>
+  <div class="miembros">
+    <div class="miembro">
+      <img src="/img/avatar4.jpg" alt="Andrés, Desarrollador" />
+      <h4>Andrés</h4>
+      <p>Desarrollador Backend amante del café y los APIs robustos.</p>
+    </div>
+    <div class="miembro">
+      <img src="/img/avatar5.jpg" alt="Lucía, Diseñadora UX" />
+      <h4>Lucía</h4>
+      <p>Diseñadora de experiencias simples, intuitivas y bonitas.</p>
+    </div>
+    <div class="miembro">
+      <img src="/img/avatar6.jpg" alt="Carlos, Soporte Técnico" />
+      <h4>Carlos</h4>
+      <p>Especialista en atención al cliente con una sonrisa 24/7.</p>
+    </div>
+  </div>
+</section>
+
+
 </main>
 
 <footer class="footer">
@@ -124,6 +189,23 @@ session_start();
     });
   });
 </script>
+
+<script>
+  const pasos = document.querySelectorAll('.paso');
+
+  const mostrarPaso = () => {
+    pasos.forEach(paso => {
+      const top = paso.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        paso.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', mostrarPaso);
+  window.addEventListener('load', mostrarPaso);
+</script>
+
 
 </body>
 </html>
