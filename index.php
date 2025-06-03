@@ -13,6 +13,7 @@ session_start();
 </head>
 <body>
 
+
 <header>
   <nav class="navbar">
     <div class="logo">
@@ -30,6 +31,32 @@ session_start();
     </div>
   </nav>
 </header>
+
+<!-- HERO SECCIÓN INICIO -->
+<section class="hero">
+  <h1>Todo tu negocio en<br><span class="resaltado-naranja">una sola plataforma</span></h1>
+  <p>¡Sencillo, eficiente y a <span class="resaltado-azul">buen precio!</span></p>
+  <div class="botones">
+    <a href="php/register.php" class="btn-primario">Comienza ahora, es gratis</a>
+    <a href="php/contacto.php" class="btn-secundario">Contacta a un consultor</a>
+  </div>
+  <div class="precio">
+    US$ 7.25 al mes por TODAS las aplicaciones
+  </div>
+  <!-- Ondas SVG decorativas -->
+<div class="ondas-svg">
+  <svg viewBox="0 0 1440 320">
+    <path fill="#ffffff33" fill-opacity="1" d="M0,64L40,69.3C80,75,160,85,240,117.3C320,149,400,203,480,202.7C560,203,640,149,720,128C800,107,880,117,960,117.3C1040,117,1120,107,1200,117.3C1280,128,1360,160,1400,176L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+  </svg>
+</div>
+
+<!-- Burbujas flotantes -->
+<ul class="burbujas">
+  <li></li><li></li><li></li><li></li><li></li>
+  <li></li><li></li><li></li><li></li><li></li>
+</ul>
+</section>
+<!-- HERO SECCIÓN FIN -->
 
 <main>
   <section class="productos">
