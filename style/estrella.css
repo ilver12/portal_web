@@ -1,0 +1,60 @@
+/* Estrellas */
+.estrellas {
+  font-size: 4rem;
+  color: #ccc;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.estrella:hover,
+.estrella:hover ~ .estrella {
+  color: gold;
+  transform: scale(1.1);
+}
+
+.estrella.seleccionada {
+  color: gold;
+}
+
+/* Mensaje de éxito */
+.mensaje-exito {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: green;
+  display: none;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sobre nosotros */
+.sobre-nosotros {
+  background-color: #f7f7f7;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 3rem auto;
+  max-width: 800px;
+}
+
+.sobre-nosotros h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sobre-nosotros p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}

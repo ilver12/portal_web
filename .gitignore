@@ -1,0 +1,8 @@
+# Archivos sensibles
+php/db.php
+uploads/
+
+# Archivos del sistema
+.DS_Store
+*.log
+*.env
