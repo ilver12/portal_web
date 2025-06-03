@@ -21,7 +21,7 @@ $result = $conn->query("SELECT * FROM productos");
 <head>
   <meta charset="UTF-8">
   <title>Productos disponibles</title>
-  
+  <link rel="stylesheet" href="/../style/cerrar.css" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -100,6 +100,12 @@ $result = $conn->query("SELECT * FROM productos");
   </style>
 </head>
 <body>
+
+<div class="topbar">
+  <form action="/../php/logout.php" method="POST">
+    <button type="submit" title="Cerrar sesión">🔓 Cerrar sesión</button>
+  </form>
+</div>
 
   <h2>Bienvenido, <?= htmlspecialchars($_SESSION['nombre']) ?></h2>
   <h3>Productos disponibles:</h3>
