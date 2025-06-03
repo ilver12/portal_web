@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $res = $stmt->get_result();
 
   if ($user = $res->fetch_assoc()) {
-    // Verifica la contraseña con password_verify
     if (password_verify($passwordInput, $user['password'])) {
       $_SESSION['usuario_id'] = $user['id'];
       $_SESSION['nombre'] = $user['nombre'];
@@ -33,18 +32,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="UTF-8"><title>Iniciar sesión</title></head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="/../style/login.css" />
+</head>
 <body>
-<h2>Iniciar sesión</h2>
-<?php if(isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
-<form method="POST" action="">
-  <input type="email" name="email" placeholder="Correo electrónico" required /><br />
-  <input type="password" name="password" placeholder="Contraseña" required /><br />
-  <button type="submit">Iniciar sesión</button>
-</form>
-<a href="register.php">¿No tienes cuenta? Regístrate</a>
+  <div class="login-container">
+    <h2>Bienvenido de nuevo</h2>
+    <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
+    <form method="POST" action="">
+      <input type="email" name="email" placeholder="Correo electrónico" required />
+      <input type="password" name="password" placeholder="Contraseña" required />
+      <button type="submit">Iniciar sesión</button>
+    </form>
+    <p class="registro-link">¿No tienes cuenta? <a href="register.php">Regístrate</a></p>
+  </div>
+
+  <!-- Fondo animado -->
+  <div class="ondas-svg">
+    <svg viewBox="0 0 1440 320">
+      <path fill="#ffffff33" fill-opacity="1" d="M0,160L40,170.7C80,181,160,203,240,186.7C320,171,400,117,480,117.3C560,117,640,171,720,186.7C800,203,880,181,960,176C1040,171,1120,181,1200,192C1280,203,1360,213,1400,218.7L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+    </svg>
+  </div>
+
+  <ul class="burbujas">
+    <li></li><li></li><li></li><li></li><li></li>
+    <li></li><li></li><li></li><li></li><li></li>
+  </ul>
 </body>
 </html>
