@@ -6,3 +6,6 @@ uploads/
 .DS_Store
 *.log
 *.env
+# nunca subir dumps de base de datos
+*_dump_*.sql
+*.env
